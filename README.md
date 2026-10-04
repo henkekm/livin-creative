@@ -27,6 +27,8 @@ The site fetches its data from root-relative paths (`/events-library/…`, `/kit
    `.cpanel.yml` copies the site files into `~/public_html/`.
 4. Repeat step 3 whenever new changes are pushed to GitHub.
 
+Deploying only adds or overwrites files. If you delete or rename a file in the repo, also delete the old copy from `public_html` in File Manager.
+
 ### Option B — File Manager / FTP upload
 
 Upload the following into `public_html` (keep the folder structure):
