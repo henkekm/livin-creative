@@ -1,0 +1,10 @@
+---
+# cPanel Git(TM) Version Control deployment.
+# Copies the public website files into the account's public_html directory.
+# Repository-only files (README.md, .gitignore, .cpanel.yml, .git) are not deployed.
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp index.html favicon.svg .htaccess $DEPLOYPATH
+    - /bin/cp -R styles scripts _images _collateral events-library kits-library $DEPLOYPATH
